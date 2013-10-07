@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+\\psf\Home\Desktop\GitHub\WordWatch\arm\blinky.uvproj
+Project File Date:  10/04/2013
+
+<h2>Output:</h2>
+Build target 'nrf51822_xxaa (256K)'
+Clean started - Project: 'blinky'
+   deleting intermediate output files for target 'nrf51822_xxaa (256K)'
+creating preprocessor file for main.c...
+..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
+compiling main.c...
+..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
+assembling startup_arm_nrf51.s...
+startup_arm_nrf51.s: error: A1023E: File "..\..\..\..\Source\templates\arm\arm_startup_nrf51.s" could not be opened: No such file or directory
+".\_build\blinky_arm.axf" - 3 Errors, 0 Warning(s).
+
+*** Performing Cross-Module-Optimization:
+*** Feedback file '.\_build\blinky_arm.fed' not found.
+Target not created
+Build target 'nrf51822_xxaa (256K)'
+Clean started - Project: 'blinky'
+   deleting intermediate output files for target 'nrf51822_xxaa (256K)'
+creating preprocessor file for main.c...
+..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
+compiling main.c...
+..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
+assembling startup_arm_nrf51.s...
+startup_arm_nrf51.s: error: A1023E: File "..\..\..\..\Source\templates\arm\arm_startup_nrf51.s" could not be opened: No such file or directory
+".\_build\blinky_arm.axf" - 3 Errors, 0 Warning(s).
+
+*** Performing Cross-Module-Optimization:
+*** Feedback file '.\_build\blinky_arm.fed' not found.
+Target not created
