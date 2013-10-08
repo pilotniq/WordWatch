@@ -15,3 +15,9 @@
 *.exe
 *.out
 *.app
+
+# OS Junk
+.DS_Store
+
+# Directories
+arm/_build
