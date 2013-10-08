@@ -118,27 +118,28 @@ static void hfclk_config( void )
  */
 static void rtc_config(void)
 {
-    NVIC_EnableIRQ(RTC0_IRQn);                                      // Enable Interrupt for the RTC in the core.
-    NRF_RTC0->PRESCALER     = 32767;                    // Set prescaler to a TICK of RTC_FREQUENCY.
-    NRF_RTC0->CC[0]         = 8; // 8 ticks = 1 second COMPARE_COUNTERTIME * RTC_FREQUENCY;  // Compare0 after approx COMPARE_COUNTERTIME seconds.
+	// RTC0 is used by the S110 Softdevice, so use RTC1.
+    NVIC_EnableIRQ(RTC1_IRQn);                                      // Enable Interrupt for the RTC in the core.
+    NRF_RTC1->PRESCALER     = 32767;                    // Set prescaler to a TICK of RTC_FREQUENCY.
+    NRF_RTC1->CC[0]         = 8; // 8 ticks = 1 second COMPARE_COUNTERTIME * RTC_FREQUENCY;  // Compare0 after approx COMPARE_COUNTERTIME seconds.
 
     // Enable TICK event and TICK interrupt:
     // NRF_RTC0->EVTENSET      = RTC_EVTENSET_TICK_Msk;
     // NRF_RTC0->INTENSET      = RTC_INTENSET_TICK_Msk;
 
-	  NRF_RTC0->INTENSET      = RTC_INTENSET_COMPARE0_Msk;
+	  NRF_RTC1->INTENSET      = RTC_INTENSET_COMPARE0_Msk;
 
-		NRF_RTC0->TASKS_START = 1;
+		NRF_RTC1->TASKS_START = 1;
 
     // Enable COMPARE0 event and COMPARE0 interrupt:
     // NRF_RTC0->EVTENSET      = RTC_EVTENSET_COMPARE0_Msk;
 }
 
 // Interrupt handler
-/** @brief: Function for handling the RTC0 interrupts.
+/** @brief: Function for handling the RTC1 interrupts.
  * Triggered on TICK and COMPARE0 match.
  */
-void RTC0_IRQHandler()
+void RTC1_IRQHandler()
 {
 /*
     if ((NRF_RTC0->EVENTS_TICK != 0) && 
@@ -148,11 +149,11 @@ void RTC0_IRQHandler()
         nrf_gpio_pin_toggle(GPIO_TOGGLE_TICK_EVENT);
     }
 */   
-    if ((NRF_RTC0->EVENTS_COMPARE[0] != 0) && 
-        ((NRF_RTC0->INTENSET & RTC_INTENSET_COMPARE0_Msk) != 0))
+    if ((NRF_RTC1->EVENTS_COMPARE[0] != 0) && 
+        ((NRF_RTC1->INTENSET & RTC_INTENSET_COMPARE0_Msk) != 0))
     {
-        NRF_RTC0->EVENTS_COMPARE[0] = 0;
-				NRF_RTC0->CC[0] = NRF_RTC0->CC[0] + 8;
+        NRF_RTC1->EVENTS_COMPARE[0] = 0;
+				NRF_RTC1->CC[0] = NRF_RTC0->CC[0] + 8;
 			
 				display_toggle_COM();
 

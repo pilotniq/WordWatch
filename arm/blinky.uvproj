@@ -351,7 +351,7 @@
               <MiscControls>--c99</MiscControls>
               <Define>NRF51 BOARD_NRF6310</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\Include</IncludePath>
+              <IncludePath>..\..\..\..\Include;C:\Keil\ARM\Device\Nordic\nrf51822\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
