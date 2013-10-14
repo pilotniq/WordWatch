@@ -4,19 +4,24 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 \\psf\Home\Desktop\GitHub\WordWatch\arm\blinky.uvproj
-Project File Date:  10/04/2013
+Project File Date:  10/08/2013
 
 <h2>Output:</h2>
 Build target 'nrf51822_xxaa (256K)'
 Clean started - Project: 'blinky'
    deleting intermediate output files for target 'nrf51822_xxaa (256K)'
 creating preprocessor file for main.c...
-..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
 compiling main.c...
-..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
+..\main.c(49): error:  #20: identifier "TX_RX_MSG_LENGTH" is undefined
+..\main.c(197): warning:  #223-D: function "spi_master_init" declared implicitly
+..\main.c(197): error:  #20: identifier "SPI_MODE0" is undefined
+..\main.c(197): error:  #20: identifier "bool" is undefined
+..\main.c(197): error:  #18: expected a ")"
+..\main.c(197): error:  #144: a value of type "int" cannot be used to initialize an entity of type "uint32_t *"
+..\main.c(198): warning:  #223-D: function "assert" declared implicitly
 assembling startup_arm_nrf51.s...
 startup_arm_nrf51.s: error: A1023E: File "..\..\..\..\Source\templates\arm\arm_startup_nrf51.s" could not be opened: No such file or directory
-".\_build\blinky_arm.axf" - 3 Errors, 0 Warning(s).
+".\_build\blinky_arm.axf" - 6 Errors, 2 Warning(s).
 
 *** Performing Cross-Module-Optimization:
 *** Feedback file '.\_build\blinky_arm.fed' not found.
@@ -25,12 +30,33 @@ Build target 'nrf51822_xxaa (256K)'
 Clean started - Project: 'blinky'
    deleting intermediate output files for target 'nrf51822_xxaa (256K)'
 creating preprocessor file for main.c...
-..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
 compiling main.c...
-..\main.c(5): error:  #5: cannot open source input file "nrf.h": No such file or directory
+..\main.c(197): warning:  #223-D: function "spi_master_init" declared implicitly
+..\main.c(197): error:  #20: identifier "SPI_MODE0" is undefined
+..\main.c(197): error:  #20: identifier "bool" is undefined
+..\main.c(197): error:  #18: expected a ")"
+..\main.c(197): error:  #144: a value of type "int" cannot be used to initialize an entity of type "uint32_t *"
+..\main.c(198): warning:  #223-D: function "assert" declared implicitly
 assembling startup_arm_nrf51.s...
 startup_arm_nrf51.s: error: A1023E: File "..\..\..\..\Source\templates\arm\arm_startup_nrf51.s" could not be opened: No such file or directory
-".\_build\blinky_arm.axf" - 3 Errors, 0 Warning(s).
+".\_build\blinky_arm.axf" - 5 Errors, 2 Warning(s).
+
+*** Performing Cross-Module-Optimization:
+*** Feedback file '.\_build\blinky_arm.fed' not found.
+Target not created
+Build target 'nrf51822_xxaa (256K)'
+Clean started - Project: 'blinky'
+   deleting intermediate output files for target 'nrf51822_xxaa (256K)'
+creating preprocessor file for main.c...
+compiling main.c...
+..\main.c(199): warning:  #223-D: function "spi_master_init" declared implicitly
+..\main.c(199): error:  #20: identifier "SPI_MODE0" is undefined
+..\main.c(199): error:  #20: identifier "lsb_first" is undefined
+..\main.c(199): error:  #144: a value of type "int" cannot be used to initialize an entity of type "uint32_t *"
+..\main.c(200): warning:  #223-D: function "assert" declared implicitly
+assembling startup_arm_nrf51.s...
+startup_arm_nrf51.s: error: A1023E: File "..\..\..\..\Source\templates\arm\arm_startup_nrf51.s" could not be opened: No such file or directory
+".\_build\blinky_arm.axf" - 4 Errors, 2 Warning(s).
 
 *** Performing Cross-Module-Optimization:
 *** Feedback file '.\_build\blinky_arm.fed' not found.

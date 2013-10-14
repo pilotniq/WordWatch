@@ -1,6 +1,8 @@
 // processor family; required by nrf.h
 // #define NRF51
 
+#include <stdbool.h>
+
 // #include <core.h>
 #include "nrf.h"
 #include "nrf_gpiote.h"
@@ -46,8 +48,8 @@ unsigned int yearCounter = 2013;
 unsigned int VCOM_inhibit = 0;
 
 /* SPI buffers */
-static uint8_t tx_data[TX_RX_MSG_LENGTH]; /**< SPI TX buffer. */
-static uint8_t rx_data[TX_RX_MSG_LENGTH]; /**< SPI RX buffer. */
+// static uint8_t tx_data[TX_RX_MSG_LENGTH]; /**< SPI TX buffer. */
+// static uint8_t rx_data[TX_RX_MSG_LENGTH]; /**< SPI RX buffer. */
 
 #define DELAY_MS               100        /**< SPI Timer Delay in milli-seconds. */
 
