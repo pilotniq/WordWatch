@@ -4,6 +4,11 @@
 #ifndef ERL_SPI_MASTER
 #define ERL_SPI_MASTER
 
+#include <stdbool.h>
+#include <stdint.h>
+
+#include <nrf51.h> // for NRF_SPI_Type
+
 /**
  *  SPI mode
  */
@@ -21,16 +26,24 @@ typedef struct sSPIMasterSlave
 {
 	int selectPin;
 	int selectActiveHigh;
+	int selectDelayUs; // microseconds of delay required after select active
 	SPIMode mode;
 	int lsb_first;
-	int frequency_kHz;
+	uint32_t frequencyConstant;
 } sSPIMasterSlave, *SPIMasterSlave;
+
+typedef struct sSPIMaster
+{
+  NRF_SPI_Type *baseAddress;
+	const sSPIMasterSlave *previousSlave;
+} sSPIMaster;
 
 typedef struct sSPIMaster *SPIMaster;
 
-void spiMaster_init( int module_number, SPIMode mode, int sckPin, int mosiPin, int misoPin ):
+void spiMaster_init( sSPIMaster *master, int module_number, int sckPin, int mosiPin, int misoPin );
 
-void spiMaster_txRx( SPIMaster, uint16_t transfer_size, const uint8_t *tx_data, uint8_t *rx_data, int ssPin, 
-                     bool ssActiveHigh );
+// returns true on success, false on failure (timeout)
+bool spiMaster_txRx( const SPIMaster, const sSPIMasterSlave *slave, uint16_t transfer_size, 
+                     const uint8_t *tx_data, uint8_t *rx_data );
 
 #endif

@@ -351,7 +351,7 @@
               <MiscControls>--c99</MiscControls>
               <Define>NRF51 BOARD_NRF6310</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\Include;C:\Keil\ARM\Device\Nordic\nrf51822\Include</IncludePath>
+              <IncludePath>..\..\..\..\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -402,6 +402,21 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\..\Source\keil_arm_uv4.lnt</FilePath>
             </File>
+            <File>
+              <FileName>spiMaster.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\spiMaster.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ble.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_ancs_c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ble_ancs_c.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -426,6 +441,41 @@
               <FileName>nrf_delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\Source\nrf_delay\nrf_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_stack_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_stack_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_advdata.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_advdata.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_bondmngr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_bondmngr.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_conn_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_conn_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\app_common\app_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_error_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_error_log.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -827,6 +877,21 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\..\Source\keil_arm_uv4.lnt</FilePath>
             </File>
+            <File>
+              <FileName>spiMaster.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\spiMaster.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ble.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_ancs_c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ble_ancs_c.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -851,6 +916,41 @@
               <FileName>nrf_delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\Source\nrf_delay\nrf_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_stack_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_stack_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_advdata.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_advdata.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_bondmngr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_bondmngr.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_conn_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_conn_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\app_common\app_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_error_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_error_log.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1015,7 +1115,7 @@
             <Capability>1</Capability>
             <DriverSelection>4099</DriverSelection>
           </Flash1>
-          <bUseTDR>0</bUseTDR>
+          <bUseTDR>1</bUseTDR>
           <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
@@ -1201,7 +1301,7 @@
               <MiscControls>--c99</MiscControls>
               <Define>NRF51 BOARD_NRF6310</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\Include</IncludePath>
+              <IncludePath>.;..\..\..\..\Include;..\..\..\..\Include\ble;..\..\..\..\Include\ble\softdevice;..\..\..\..\Include\app_common;..\..\..\..\Include\ble\ble_services</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1252,6 +1352,21 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\..\Source\keil_arm_uv4.lnt</FilePath>
             </File>
+            <File>
+              <FileName>spiMaster.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\spiMaster.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ble.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_ancs_c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ble_ancs_c.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1276,6 +1391,41 @@
               <FileName>nrf_delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\Source\nrf_delay\nrf_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_stack_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_stack_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_advdata.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_advdata.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_bondmngr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_bondmngr.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_conn_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_conn_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\app_common\app_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_error_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_error_log.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1677,6 +1827,21 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\..\Source\keil_arm_uv4.lnt</FilePath>
             </File>
+            <File>
+              <FileName>spiMaster.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\spiMaster.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ble.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_ancs_c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ble_ancs_c.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1701,6 +1866,41 @@
               <FileName>nrf_delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\Source\nrf_delay\nrf_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_stack_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_stack_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_advdata.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_advdata.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_bondmngr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_bondmngr.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_conn_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_conn_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\app_common\app_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_error_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Source\ble\ble_error_log.c</FilePath>
             </File>
           </Files>
         </Group>
